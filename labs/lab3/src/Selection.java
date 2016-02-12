@@ -4,18 +4,18 @@
  *  Dependencies: StdOut.java StdIn.java
  *  Data files:   http://algs4.cs.princeton.edu/21sort/tiny.txt
  *                http://algs4.cs.princeton.edu/21sort/words3.txt
- *   
+ *
  *  Sorts a sequence of strings from standard input using selection sort.
- *   
+ *
  *  % more tiny.txt
  *  S O R T E X A M P L E
  *
  *  % java Selection < tiny.txt
  *  A E E L M O P R S T X                 [ one string per line ]
- *    
+ *
  *  % more words3.txt
  *  bed bug dad yes zoo ... all bad yet
- *  
+ *
  *  % java Selection < words3.txt
  *  all bad bed bug dad ... yes yet zoo    [ one string per line ]
  *
@@ -77,7 +77,7 @@ public class Selection {
    /***********************************************************************
     *  Helper sorting functions
     ***********************************************************************/
-    
+
     // is v < w ?
     private static boolean less(Comparable v, Comparable w) {
         return (v.compareTo(w) < 0);
@@ -87,8 +87,8 @@ public class Selection {
     private static boolean less(Comparator c, Object v, Object w) {
         return (c.compare(v, w) < 0);
     }
-        
-        
+
+
     // exchange a[i] and a[j]
     private static void exch(Object[] a, int i, int j) {
         Object swap = a[i];
@@ -105,7 +105,7 @@ public class Selection {
     private static boolean isSorted(Comparable[] a) {
         return isSorted(a, 0, a.length - 1);
     }
-        
+
     // is the array sorted from a[lo] to a[hi]
     private static boolean isSorted(Comparable[] a, int lo, int hi) {
         for (int i = lo + 1; i <= hi; i++)
@@ -135,8 +135,8 @@ public class Selection {
     }
 
     /**
-     * Reads in a sequence of strings from standard input; selection sorts them; 
-     * and prints them to standard output in ascending order. 
+     * Reads in a sequence of strings from standard input; selection sorts them;
+     * and prints them to standard output in ascending order.
      */
     public static void main(String[] args) {
         String[] a = StdIn.readAllStrings();
